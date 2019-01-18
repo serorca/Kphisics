@@ -7,13 +7,13 @@
 
     <fragment
         android:id="@+id/projectsNavFragment"
-        android:name="com.example.kphisics.ProjectsNavFragment"
+        android:name="com.example.kphisics.ui.projects.ProjectsNavFragment"
         android:label="Home"
         tools:layout="@layout/fragment_projects_bottom_nav" />
 
     <fragment
         android:id="@+id/infoFragment"
-        android:name="com.example.kphisics.InfoFragment"
+        android:name="com.example.kphisics.ui.InfoFragment"
         android:label="Info"
         tools:layout="@layout/fragment_info" />
 </navigation>

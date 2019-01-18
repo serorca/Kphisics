@@ -1,4 +1,4 @@
-package com.example.kphisics
+package com.example.kphisics.ui
 
 import androidx.fragment.app.Fragment
 
