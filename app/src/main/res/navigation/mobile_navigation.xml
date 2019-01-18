@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/projectsNavFragment">
+
+    <fragment
+        android:id="@+id/projectsNavFragment"
+        android:name="com.example.kphisics.ProjectsNavFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_projects_bottom_nav" />
+
+    <fragment
+        android:id="@+id/toolsFragment"
+        android:name="com.example.kphisics.ToolsNavFragment"
+        android:label="Info"
+        tools:layout="@layout/fragment_tools" />
+
+</navigation>
