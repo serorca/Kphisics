@@ -9,7 +9,7 @@
         android:id="@+id/projectsNavFragment"
         android:name="com.example.kphisics.ui.projects.ProjectsNavFragment"
         android:label="Home"
-        tools:layout="@layout/fragment_projects_bottom_nav" />
+        tools:layout="@layout/fragment_bottom_nav" />
 
     <fragment
         android:id="@+id/toolsFragment"
