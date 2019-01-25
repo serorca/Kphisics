@@ -18,7 +18,7 @@ class MainNavFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val navController = Navigation.findNavController(requireActivity(), R.id.projectsNavFragment)
+        val navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
         bottomNavigation.setupWithNavController(navController)
     }
 }

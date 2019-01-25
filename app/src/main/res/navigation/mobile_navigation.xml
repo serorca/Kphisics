@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/projectsNavFragment">
+    app:startDestination="@+id/nav_host_fragment">
 
     <fragment
-        android:id="@+id/projectsNavFragment"
+        android:id="@+id/nav_host_fragment"
         android:name="com.example.kphisics.ui.projects.ProjectsNavFragment"
         android:label="Home"
         tools:layout="@layout/fragment_bottom_nav" />
@@ -16,5 +16,17 @@
         android:name="com.example.kphisics.ui.tools.ToolsNavFragment"
         android:label="Tools"
         tools:layout="@layout/fragment_tools" />
+
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.example.kphisics.ui.InfoFragment"
+        android:label="Info"
+        tools:layout="@layout/fragment_info" />
+
+    <fragment
+        android:id="@+id/shareFragment"
+        android:name="com.example.kphisics.ui.ShareFragment"
+        android:label="Share"
+        tools:layout="@layout/fragment_info" />
 
 </navigation>

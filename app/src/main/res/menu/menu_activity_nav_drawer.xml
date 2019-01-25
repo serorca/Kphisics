@@ -5,12 +5,12 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/projectsNavFragment"
+            android:id="@id/nav_host_fragment"
             android:icon="@mipmap/ic_projects"
             android:title="@string/projects_bottom_nav_title"/>
 
         <item
-            android:id="@+id/toolsFragment"
+            android:id="@id/toolsFragment"
             android:icon="@drawable/ic_menu_manage"
             android:title="@string/tools" />
     </group>
@@ -18,11 +18,11 @@
     <item android:title="@string/communicate">
         <menu>
             <item
-                android:id="@+id/shareNavFragment"
+                android:id="@id/shareFragment"
                 android:icon="@drawable/ic_menu_share"
                 android:title="@string/share" />
             <item
-                android:id="@+id/infoNavFragment"
+                android:id="@id/infoFragment"
                 android:icon="@android:drawable/ic_dialog_info"
                 android:title="@string/info" />
         </menu>
