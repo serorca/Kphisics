@@ -7,13 +7,18 @@ import android.view.ViewGroup
 import android.widget.BaseExpandableListAdapter
 import android.widget.TextView
 import com.example.kphisics.R
+import com.example.kphisics.model.SensorNames
 import java.util.*
 
-class ExpandableListAdapter (private val context: Context, private val deptList: ArrayList<HeaderInfo>) : BaseExpandableListAdapter() {
+class ExpandableListAdapter (private val context: Context, private val deptList: ArrayList<Int>) : BaseExpandableListAdapter() {
+
+    override fun getChildrenCount(groupPosition: Int): Int {
+        return 0
+    }
 
     override fun getChild(groupPosition: Int, childPosition: Int): Any {
-        val productList = deptList[groupPosition].getProductList()
-        return productList[childPosition]
+//        val productList = deptList[groupPosition].getProductList()
+        return 0
     }
 
     override fun getChildId(groupPosition: Int, childPosition: Int): Long {
@@ -38,12 +43,6 @@ class ExpandableListAdapter (private val context: Context, private val deptList:
         return view
     }
 
-    override fun getChildrenCount(groupPosition: Int): Int {
-
-        val productList = deptList[groupPosition].getProductList()
-        return productList.size
-    }
-
     override fun getGroup(groupPosition: Int): Any {
         return deptList[groupPosition]
     }
@@ -60,14 +59,14 @@ class ExpandableListAdapter (private val context: Context, private val deptList:
                               parent: ViewGroup): View {
         var view = view
 
-        val headerInfo = getGroup(groupPosition) as HeaderInfo
+        val headerInfo = getGroup(groupPosition)
         if (view == null) {
             val inf = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
             view = inf.inflate(R.layout.group_heading, null)
         }
 
         val heading = view!!.findViewById(R.id.heading) as TextView
-        heading.text = headerInfo.getName()!!.trim()
+        heading.text = headerInfo.toString()
 
         return view
     }

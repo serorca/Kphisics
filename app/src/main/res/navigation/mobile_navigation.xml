@@ -14,7 +14,7 @@
     <fragment
         android:id="@+id/toolsFragment"
         android:name="com.example.kphisics.ui.tools.ToolsNavFragment"
-        android:label="Info"
+        android:label="Tools"
         tools:layout="@layout/fragment_tools" />
 
 </navigation>

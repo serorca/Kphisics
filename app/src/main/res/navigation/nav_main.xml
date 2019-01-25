@@ -12,8 +12,20 @@
         tools:layout="@layout/fragment_bottom_nav" />
 
     <fragment
+        android:id="@+id/toolsFragment"
+        android:name="com.example.kphisics.ui.tools.ToolsNavFragment"
+        android:label="Tools"
+        tools:layout="@layout/fragment_tools" />
+
+    <fragment
         android:id="@+id/infoFragment"
         android:name="com.example.kphisics.ui.InfoFragment"
         android:label="Info"
+        tools:layout="@layout/fragment_info" />
+
+    <fragment
+        android:id="@+id/shareFragment"
+        android:name="com.example.kphisics.ui.ShareFragment"
+        android:label="Share"
         tools:layout="@layout/fragment_info" />
 </navigation>
