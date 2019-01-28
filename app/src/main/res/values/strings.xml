@@ -14,4 +14,13 @@
     <string name="communicate">Communicate</string>
     <string name="info">Info</string>
     <string name="info_text">lorem ipsum dolor</string>
+    <string name="title_light">Light</string>
+    <string name="title_acoustic_intensity">Acoustic Intensity</string>
+    <string name="title_sound_tone">Sound Tone</string>
+    <string name="title_accelerometer">Accelerometer</string>
+    <string name="title_accelerometer_x">Accelerometer (X)</string>
+    <string name="title_accelerometer_y">Accelerometer (Y)</string>
+    <string name="title_accelerometer_z">Accelerometer (Z)</string>
+    <string name="title_magnetic_field">Magnetic Field</string>
+    <string name="title_unknown">Unknown</string>
 </resources>

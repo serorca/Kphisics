@@ -43,7 +43,7 @@ class ExpandableListAdapter (private val context: Context, private val deptList:
         return view
     }
 
-    override fun getGroup(groupPosition: Int): Any {
+    override fun getGroup(groupPosition: Int): Int {
         return deptList[groupPosition]
     }
 
@@ -62,11 +62,11 @@ class ExpandableListAdapter (private val context: Context, private val deptList:
         val headerInfo = getGroup(groupPosition)
         if (view == null) {
             val inf = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-            view = inf.inflate(R.layout.group_heading, null)
+            view = inf.inflate(R.layout.expandable_list_group, null)
         }
 
         val heading = view!!.findViewById(R.id.heading) as TextView
-        heading.text = headerInfo.toString()
+        heading.text = context.resources.getString(SensorNames.titleForFype(headerInfo))
 
         return view
     }
