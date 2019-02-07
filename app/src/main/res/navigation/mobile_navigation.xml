@@ -19,13 +19,13 @@
 
     <fragment
         android:id="@+id/infoFragment"
-        android:name="com.example.kphisics.ui.InfoFragment"
+        android:name="com.example.kphisics.ui.info.InfoFragment"
         android:label="Info"
         tools:layout="@layout/fragment_info" />
 
     <fragment
         android:id="@+id/shareFragment"
-        android:name="com.example.kphisics.ui.ShareFragment"
+        android:name="com.example.kphisics.ui.share.ShareFragment"
         android:label="Share"
         tools:layout="@layout/fragment_info" />
 

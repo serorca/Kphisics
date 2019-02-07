@@ -1,4 +1,4 @@
-package com.example.kphisics.ui.projects
+package com.example.kphisics.ui.main
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,7 +10,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.kphisics.R
 import kotlinx.android.synthetic.main.fragment_bottom_nav.*
 
-class MainNavFragment : Fragment() {
+class MainFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return  inflater.inflate(R.layout.fragment_bottom_nav, container, false)

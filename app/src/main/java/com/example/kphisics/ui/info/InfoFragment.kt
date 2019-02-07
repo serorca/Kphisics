@@ -1,4 +1,4 @@
-package com.example.kphisics.ui
+package com.example.kphisics.ui.info
 
 import android.os.Bundle
 import android.view.LayoutInflater

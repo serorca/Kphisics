@@ -1,5 +1,5 @@
 
-package com.example.kphisics.ui;
+package com.example.kphisics.ui.share;
 
 import android.app.Fragment;
 
