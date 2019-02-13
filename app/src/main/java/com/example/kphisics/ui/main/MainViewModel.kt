@@ -1,4 +1,8 @@
 package com.example.kphisics.ui.main
 
-class MainViewModel {
+import androidx.lifecycle.ViewModel
+
+class MainViewModel : ViewModel() {
+
+
 }

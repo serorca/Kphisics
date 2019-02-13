@@ -10,8 +10,6 @@ import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 import com.example.kphisics.R
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.app_bar_main.*
-import kotlinx.android.synthetic.main.fragment_bottom_nav.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -32,8 +30,6 @@ class MainActivity : AppCompatActivity() {
         val toggle = ActionBarDrawerToggle(
                 this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
         drawerLayout.addDrawerListener(toggle)
-
-
 
         toggle.syncState()
 
