@@ -7,7 +7,7 @@
 
         <variable
             name="mainViewModel"
-            type="com.example.kphisics.ui.main.MainViewModel" />
+            type="com.example.kphisics.ui.tools.ChildViewModel" />
     </data>
 
     <androidx.drawerlayout.widget.DrawerLayout

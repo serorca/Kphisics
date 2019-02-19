@@ -1,6 +1,10 @@
 package com.example.kphisics.ui.tools
 
 import android.content.Context
+import android.hardware.Sensor
+import android.hardware.SensorEvent
+import android.hardware.SensorEventListener
+import android.hardware.SensorManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,8 +22,8 @@ class ExpandableListAdapter (private val context: Context, private val deptList:
     }
 
     override fun getChild(groupPosition: Int, childPosition: Int): Any {
-//        val productList = deptList[groupPosition].getProductList()
-        return 0
+
+        return getGroup(groupPosition)
     }
 
     override fun getChildId(groupPosition: Int, childPosition: Int): Long {
@@ -30,9 +34,11 @@ class ExpandableListAdapter (private val context: Context, private val deptList:
                               view: View?, parent: ViewGroup): View {
         val view = view
 
-        val detailInfo = getChild(groupPosition, childPosition) as DetailInfo
+        val sensorDetail = getChild(groupPosition, childPosition)
 
-        val resultView = view ?: parent.inflate(resource = R.layout.child_row)
+
+
+        val resultView = view ?: parent.inflate(resource = R.layout.expandable_list_item)
 
         return resultView
     }
