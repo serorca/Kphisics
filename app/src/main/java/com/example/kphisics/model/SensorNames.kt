@@ -43,6 +43,7 @@ class SensorNames {
     private val names = arrayOf("LIGHT", "ACOUSTIC_INTENSITY", "SOUND_TONE", "ACCELEROMETER",
             "ACCELEROMETER_X", "ACCELEROMETER_Y", "ACCELEROMETER_Z", "MAGNETIC_FIELD")
 
+
     fun SensorName() {}
 
     fun name(e: Int): String {
