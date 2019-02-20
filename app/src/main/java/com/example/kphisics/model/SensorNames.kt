@@ -23,7 +23,7 @@ class SensorNames {
 
         const val MAGNETIC_FIELD = Sensor.TYPE_MAGNETIC_FIELD
 
-        fun titleForFype(type: Int): Int {
+        fun titleForType(type: Int): Int {
 
             return when (type) {
 

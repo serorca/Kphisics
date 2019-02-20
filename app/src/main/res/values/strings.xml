@@ -23,4 +23,5 @@
     <string name="title_accelerometer_z">Accelerometer (Z)</string>
     <string name="title_magnetic_field">Magnetic Field</string>
     <string name="title_unknown">Unknown</string>
+    <string name="waiting_for_sensor">Waiting for sensor:</string>
 </resources>

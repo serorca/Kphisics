@@ -5,4 +5,4 @@ import android.view.ViewGroup
 
 
 fun ViewGroup.inflate(inflater: LayoutInflater = LayoutInflater.from(context), resource: Int) =
-        inflater.inflate(resource, null, false)
+        inflater.inflate(resource, this, false)

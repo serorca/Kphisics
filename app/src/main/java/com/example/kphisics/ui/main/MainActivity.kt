@@ -1,4 +1,4 @@
-package com.example.kphisics.ui
+package com.example.kphisics.ui.main
 
 import android.os.Bundle
 import androidx.appcompat.app.ActionBarDrawerToggle

@@ -1,6 +1,7 @@
 package com.example.kphisics.ui.tools
 
 import android.content.Context
+import android.provider.ContactsContract
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,6 +10,8 @@ import android.widget.TextView
 import com.example.kphisics.R
 import com.example.kphisics.model.SensorNames
 import com.example.kphisics.utils.inflate
+import com.github.mikephil.charting.charts.Chart
+import com.github.mikephil.charting.charts.LineChart
 import java.util.*
 
 class ExpandableListAdapter (private val context: Context, private val deptList: ArrayList<Int>) : BaseExpandableListAdapter() {
@@ -31,15 +34,14 @@ class ExpandableListAdapter (private val context: Context, private val deptList:
         var view = view
 
         val detailInfo = getChild(groupPosition, childPosition) as DetailInfo
+
         if (view == null) {
             val infalInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-            view = infalInflater.inflate(R.layout.child_row, null)
+            view = infalInflater.inflate(R.layout.expandable_list_item, null)
         }
 
-        val sequence = view?.findViewById(R.id.sequence) as TextView
-        sequence.text = detailInfo.getSequence().trim() + ") "
-        val childItem = view.findViewById(R.id.childItem) as TextView
-        childItem.text = detailInfo.getName().trim()
+        val chart = view?.findViewById(R.id.chart) as LineChart
+
 
         return view
     }
@@ -64,7 +66,7 @@ class ExpandableListAdapter (private val context: Context, private val deptList:
         val returnView = view ?: parent.inflate(resource = R.layout.expandable_list_group)
 
         val heading = returnView.findViewById<TextView>(R.id.heading)
-        heading.text = context.resources.getString(SensorNames.titleForFype(headerInfo))
+        heading.text = context.resources.getString(SensorNames.titleForType(headerInfo))
 
         return returnView
     }
