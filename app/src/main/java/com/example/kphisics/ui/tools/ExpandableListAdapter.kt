@@ -8,6 +8,7 @@ import android.widget.BaseExpandableListAdapter
 import android.widget.TextView
 import com.example.kphisics.R
 import com.example.kphisics.model.SensorNames
+import com.example.kphisics.utils.inflate
 import java.util.*
 
 class ExpandableListAdapter (private val context: Context, private val deptList: ArrayList<Int>) : BaseExpandableListAdapter() {
@@ -57,18 +58,15 @@ class ExpandableListAdapter (private val context: Context, private val deptList:
 
     override fun getGroupView(groupPosition: Int, isLastChild: Boolean, view: View?,
                               parent: ViewGroup): View {
-        var view = view
 
         val headerInfo = getGroup(groupPosition)
-        if (view == null) {
-            val inf = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-            view = inf.inflate(R.layout.expandable_list_group, null)
-        }
 
-        val heading = view!!.findViewById(R.id.heading) as TextView
+        val returnView = view ?: parent.inflate(resource = R.layout.expandable_list_group)
+
+        val heading = returnView.findViewById<TextView>(R.id.heading)
         heading.text = context.resources.getString(SensorNames.titleForFype(headerInfo))
 
-        return view
+        return returnView
     }
 
     override fun hasStableIds(): Boolean {
