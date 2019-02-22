@@ -13,7 +13,7 @@
 
     <fragment
         android:id="@+id/toolsFragment"
-        android:name="com.example.kphisics.ui.tools.ToolsNavFragment"
+        android:name="com.example.kphisics.ui.tools.ToolsFragment"
         android:label="Tools"
         tools:layout="@layout/fragment_tools" />
 

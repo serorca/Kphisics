@@ -14,7 +14,7 @@ import com.github.mikephil.charting.charts.Chart
 import com.github.mikephil.charting.charts.LineChart
 import java.util.*
 
-class ExpandableListAdapter (private val context: Context, private val deptList: ArrayList<Int>) : BaseExpandableListAdapter() {
+class SensorExpandableListAdapter (private val context: Context, private var deptList: List<Int>) : BaseExpandableListAdapter() {
 
     override fun getChildrenCount(groupPosition: Int): Int {
         return 0
@@ -40,10 +40,12 @@ class ExpandableListAdapter (private val context: Context, private val deptList:
             view = infalInflater.inflate(R.layout.expandable_list_item, null)
         }
 
+        val returnView = view ?: parent.inflate(resource = R.layout.expandable_list_item)
+
         val chart = view?.findViewById(R.id.chart) as LineChart
 
 
-        return view
+        return returnView
     }
 
     override fun getGroup(groupPosition: Int): Int {
@@ -78,4 +80,11 @@ class ExpandableListAdapter (private val context: Context, private val deptList:
     override fun isChildSelectable(groupPosition: Int, childPosition: Int): Boolean {
         return true
     }
+
+    fun updateList(list : List<Int>) {
+        deptList = list
+        notifyDataSetChanged()
+    }
+
+
 }
