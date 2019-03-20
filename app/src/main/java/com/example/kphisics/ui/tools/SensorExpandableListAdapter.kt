@@ -42,7 +42,7 @@ class SensorExpandableListAdapter (private val context: Context, private var dep
 
         val returnView = view ?: parent.inflate(resource = R.layout.expandable_list_item)
 
-        val chart = view?.findViewById(R.id.chart) as LineChart
+        val chart = lazy { view?.findViewById(R.id.chart) as LineChart }
 
 
         return returnView
