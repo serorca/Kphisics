@@ -27,8 +27,3 @@ fun onGroupClicked(view: ExpandableListView, list: List<Int>) {
         false
     }
 }
-
-@BindingAdapter("queHostiasPasa")
-fun queHostiasPasaClicked(view: TextView, s : String){
-
-}

@@ -1,7 +1,6 @@
 package com.example.kphisics.ui.tools
 
 import android.content.Context
-import android.provider.ContactsContract
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,9 +9,7 @@ import android.widget.TextView
 import com.example.kphisics.R
 import com.example.kphisics.model.SensorNames
 import com.example.kphisics.utils.inflate
-import com.github.mikephil.charting.charts.Chart
 import com.github.mikephil.charting.charts.LineChart
-import java.util.*
 
 class SensorExpandableListAdapter (private val context: Context, private var deptList: List<Int>) : BaseExpandableListAdapter() {
 
