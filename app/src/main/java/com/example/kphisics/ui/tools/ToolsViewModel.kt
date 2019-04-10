@@ -18,6 +18,5 @@ class ToolsViewModel : ViewModel() {
             MAGNETIC_FIELD
     ))
 
-    val s = ""
 
 }

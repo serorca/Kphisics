@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseExpandableListAdapter
+import android.widget.ListAdapter
 import android.widget.TextView
 import com.example.kphisics.R
 import com.example.kphisics.model.SensorNames
@@ -14,7 +15,8 @@ import com.github.mikephil.charting.charts.Chart
 import com.github.mikephil.charting.charts.LineChart
 import java.util.*
 
-class SensorExpandableListAdapter (private val context: Context, private var deptList: List<Int>) : BaseExpandableListAdapter() {
+class SensorExpandableListAdapter(private val context: Context,
+                                   private var deptList: List<Int>) : BaseExpandableListAdapter(){
 
     override fun getChildrenCount(groupPosition: Int): Int {
         return 0
